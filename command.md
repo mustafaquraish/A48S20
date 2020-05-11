@@ -187,7 +187,7 @@ mustafa@xps:~/Desktop$ diff file1.c file2.c
 ## Compiling and running your Code
 ---
 
-First, make sure that you have `gcc` in your `PATH`.
+First, make sure that you have `gcc` in your `PATH`. If you are still unsure how to do this, detailed instructions (for Windows) can be found [here](http://www.codebind.com/cprogramming/install-mingw-windows-10-gcc/).
 
 Now, navigate to the directory where your code is located. You can compile and run your code as follows:
 ```sh
@@ -199,10 +199,11 @@ Note that by default `gcc` calls the compiled executable `a.out` or `a.exe`. If 
 
 ```sh
 mustafa@xps:~/Desktop$ gcc file.c -o myProgram
-mustafa@xps:~/Desktop$ ./myProgram
+mustafa@xps:~/Desktop$ ./myProgram  # (.\myProgram.exe on Command Prompt)
 ```
 
-Additional flags can be added as well
+Additional flags can be added as well, for example:
 ```sh
 mustafa@xps:~/Desktop$ gcc -Wall -Werror file.c -o myProgram -lm
 ```
+We will talk about what they do as we go on in the course.
