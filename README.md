@@ -16,4 +16,4 @@ To run locally:
 
 ---
 
-Check the website out [here](http://mustafaquraish.github.io/A48S20).
+Check the website out [here](http://csca48s20.github.io/Tutorials).
