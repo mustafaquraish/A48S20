@@ -167,3 +167,10 @@ int main() {
 Now, modify your existing solution of the previous part and have a vertical line that represents the x-axis, in other words, have a line that corresponds to y=0.
 
 ![ex2](W2_Ex2.png)
+
+## Key Takeaway(s)
+- Every variable in C has an associated data type that cannot be changed. You should be familiar with the different data types C presents.
+- Understand how to declare a function. Remember that, unlike Python, you need to begin the declaration with a return type.
+- Conditionals are very similar to Python. Familiarize yourself with the standard comparison operators (i.e. == / != / < / >) and logical operators (i.e. \|\| (which is a logical OR) / && (which is a logical AND)).
+- Be familiar with defining a for loop and while loop. Understanding the difference between the two is also important.
+- Similar to Python, C also has libraries in which you can use. You can use a library by typing #include<library.h>.
