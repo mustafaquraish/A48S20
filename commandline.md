@@ -137,7 +137,7 @@ mustafa@xps:~/Desktop$ ls
 file1.c       folder
 
 # Copying a file to the same directory with a different name
-mustafa@xps:~/Desktop$ cp file1.c file2.c
+mustafa@xps:~/Desktop$ cp file1.c file1.c
 mustafa@xps:~/Desktop$ ls
 file1.c       file2.c       folder
 
