@@ -104,7 +104,7 @@ for (int i = 0;    i < n;    i++) {  ... body ... }
 //     init.      cond.     inc.
 ```
 
-> `i++` is a shorthand for saying 'increment the value of `i`, and return the **old** value'. Since here we do not actually care about the return value of the increment (`i++`), it serves the purpose of simply `i = i + 1`.
+> `i++` is a shorthand for saying 'increment the value of `i` by 1, and return the **old** value'. Since here we do not actually care about the return value of the increment (`i++`), it serves the purpose of simply `i = i + 1`.
 
 > Similarly, you can also do `++i`, which is shorthand for 'increment the value of `i`, and return the **new** value'.
 
@@ -164,6 +164,6 @@ int main() {
 
 ### Spicing it up a little
 
-Now, modify your existing solution of the previous part and have a vertical line that represents the x-axis, in other words, have a line that corresponds to x=0.
+Now, modify your existing solution of the previous part and have a vertical line that represents the x-axis, in other words, have a line that corresponds to y=0.
 
 ![ex2](W2_Ex2.png)
