@@ -162,15 +162,41 @@ int main() {
 
 ---
 
-### Spicing it up a little
+## Spicing it up a little
+
+---
 
 Now, modify your existing solution of the previous part and have a vertical line that represents the x-axis, in other words, have a line that corresponds to y=0.
 
 ![ex2](W2_Ex2.png)
 
-## Key Takeaway(s)
+---
+
+# Key Takeaway(s)
+
+---
 - Every variable in C has an associated data type that cannot be changed. You should be familiar with the different data types C presents.
+
 - Understand how to declare a function. Remember that, unlike Python, you need to begin the declaration with a return type.
-- Conditionals are very similar to Python. Familiarize yourself with the standard comparison operators (i.e. == / != / < / >) and logical operators (i.e. \|\| (which is a logical OR) / && (which is a logical AND)).
+
+- Conditionals are very similar to Python. Familiarize yourself with the standard comparison operators (i.e. `==`, `!=`, `<`, `>`) and logical operators (i.e. `||` (which is a logical OR) , `&&` (which is a logical AND)).
+
 - Be familiar with defining a for loop and while loop. Understanding the difference between the two is also important.
-- Similar to Python, C also has libraries in which you can use. You can use a library by typing #include<library.h>.
+
+- Similar to Python, C also has libraries in which you can use. You can use a library by typing `#include<library.h>`.
+
+---
+
+# Additional Exercises
+
+---
+
+These are not necessary, but give you an avenue to develop what you did in this tutorial into something a lot more impressive!
+
+---
+
+1. Add variables that let you change how long the sin wave is, how wide it is, and how much it is offset from the left side of the screen. Also give the user the option to draw the wave horizontally.
+
+2. Based on whether the value is increasing / decreasing, print out `\`, `|`, `-`, `/` instead of just the asterisks (`*`). Make it look more curve-like. Details are left up to you.
+
+3. Generalize the code so that it can plot out any (reasonable) function like sin. You might have to ask the user to enter bounds on the `x` and `y` axes between which you plot them.
