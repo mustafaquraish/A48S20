@@ -12,4 +12,4 @@ sidebar-title: Week 3
 
 ---
 
-# C Memory Model and Arrays
+# C Memory Model and Arrays (WIP, moving some info into the page)
