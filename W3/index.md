@@ -143,7 +143,7 @@ As we could see, both of them do not compile.
 
 ---
 
-# Exercise
+# Exercise 
 
 ---
 
@@ -180,6 +180,17 @@ int main() {
 
 ---
 
+## Let's go further
+
+Write a function `strfind()` that *searches* for a given string in the specified main string, and returns the index of the first occurrence of the given string. If there is no match it returns `-1`. This will be extremely useful in your exercie 1. Here is some example output for this function:
+
+```c
+strfind("My name is Angela", "name") -> 3
+strfind("My name is Angela", "Mustafa") -> -1
+``` 
+
+---
+
 
 # Additional Exercises
 
@@ -190,14 +201,8 @@ These are not necessary, but give you an avenue to develop what you did in this 
 ---
 
 
-1. Write a function `strfind()` that *searches* for a given string in the specified main string, and returns the index of the first occurrence of the given string. If there is no match it returns `-1`. This will be extremely useful in your exercie 1. For example, the following should return 3.
+1. Once you have completed exercise 1, try to use the solution to implement a `replaceAllSubstrings()` function that replaces *every* occurence of a substring with something else. Implementation details are left up to you - you do not have to submit this.
 
-    ```c
-    strfind("My name is Angela", "name") 
-    ``` 
-
-2. Once you have completed exercise 1, try to use the solution to implement a `replaceAllSubstrings()` function that replaces *every* occurence of a substring with something else. Implementation details are left up to you - you do not have to submit this.
-
-3. Write a function that takes in a 2-dimensional array (ie, an array of arrays) representing a matrix, and then transposes it. [Here's some starter code.](transpose_matrix.c)
+2. Write a function that takes in a 2-dimensional array (ie, an array of arrays) representing a matrix, and then transposes it. [Here's some starter code.](transpose_matrix.c)
 
 ---
