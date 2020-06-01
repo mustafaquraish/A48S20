@@ -129,6 +129,8 @@ We can use offsets to access (and modify) other values of the array.
 *(p + 4) = 0;
 ```
 
+**Note** `my_array[x]` is exactly equivalent to `*(my_array + x)`. In fact, your compiler translates array indexing into pointer dereferencing in precisely this way! Think of it as taking the address of the first element, adding an offset to find the correct address for the element you want, and then dereferencing to get the element.
+
 ---
 
 ## Exercises
