@@ -141,11 +141,8 @@ In lecture we showed you how to write the `reverse()` function to reverse arrays
 
 ```c
 #include <stdio.h>
-#include <string.h>
 
 void reverse(char *str) {
-    // Only strlen may be used from <string.h>
-    int length =  strlen(str);
     ______ // Fill in
 }
 
@@ -181,7 +178,7 @@ int main() {
     // Call your function...
     _______
 
-    printf("min is %d, max is %d\n");
+    printf("min is %d, max is %d\n", arr_min, arr_max);
 }
 ```
 
