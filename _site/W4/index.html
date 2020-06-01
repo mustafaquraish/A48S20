@@ -54,7 +54,7 @@
 
 <hr />
 
-<p>We first need to <strong>assign</strong> a variable to our pointer. For that we use the <code class="highlighter-rouge">&amp;</code> operator.</p>
+<p>We first need to <strong>assign</strong> a variable to our pointer. For that we use the <code class="highlighter-rouge">&amp;</code> operator. The <code class="highlighter-rouge">&amp;</code> operator is the <em>address-of</em> the variable we are referencing.</p>
 
 <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// We have already declared our pointer above.
 // Now, we are going to store the address of an integer.
@@ -95,7 +95,7 @@
 
 <p>Implement a function called <code class="highlighter-rouge">div_mod()</code> that takes in two integers <code class="highlighter-rouge">a</code> and <code class="highlighter-rouge">b</code>, and returns the quotient (<code class="highlighter-rouge">a / b</code>) and the remainder (<code class="highlighter-rouge">a % b</code>).</p>
 
-<p><em>Hint:</em> You can’t return multiple values directly… How can pointers help?</p>
+<p><em>Hint:</em> You <strong>can not</strong> return multiple values directly… How can pointers help?</p>
 
 <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
 </span>
@@ -156,7 +156,12 @@
 
 <p><em>Hint:</em> Use pointers and offsets!</p>
 
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">reverse</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">str</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+</span>
+<span class="kt">void</span> <span class="nf">reverse</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">str</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Only strlen may be used from &lt;string.h&gt;
+</span>    <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span>  <span class="n">strlen</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
     <span class="n">______</span> <span class="c1">// Fill in
 </span><span class="p">}</span>
 
@@ -180,7 +185,7 @@
 
 <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include&lt;stdio.h&gt;
 </span>
-<span class="n">___</span> <span class="nf">findMinMax</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">arr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">arr_size</span><span class="p">,</span> <span class="n">_____</span><span class="p">)</span> <span class="p">{</span>
+<span class="n">___</span> <span class="nf">findMinMax</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">arr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">arr_size</span><span class="p">,</span> <span class="n">_____</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">______</span> <span class="c1">// Fill in
 </span><span class="p">}</span>
 

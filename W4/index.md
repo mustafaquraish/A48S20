@@ -30,7 +30,7 @@ Note that in this case we have said `p` points to an integer. `NULL` is the defa
 
 ---
 
-We first need to **assign** a variable to our pointer. For that we use the `&` operator.
+We first need to **assign** a variable to our pointer. For that we use the `&` operator. The `&` operator is the *address-of* the variable we are referencing.
 
 ```c
 // We have already declared our pointer above.
@@ -75,7 +75,7 @@ We can also **modify** the value of the memory box stored in the pointer.
 
 Implement a function called `div_mod()` that takes in two integers `a` and `b`, and returns the quotient (`a / b`) and the remainder (`a % b`).
 
-*Hint:* You can't return multiple values directly... How can pointers help?
+*Hint:* You **can not** return multiple values directly... How can pointers help?
 
 ```c
 #include <stdio.h>
@@ -140,7 +140,12 @@ In lecture we showed you how to write the `reverse()` function to reverse arrays
 *Hint:* Use pointers and offsets!
 
 ```c
+#include <stdio.h>
+#include <string.h>
+
 void reverse(char *str) {
+    // Only strlen may be used from <string.h>
+    int length =  strlen(str);
     ______ // Fill in
 }
 
@@ -165,7 +170,7 @@ Given the following starter code, implement the function *findMinMax* to return 
 ```c
 #include<stdio.h>
 
-___ findMinMax(char *arr, int arr_size, _____) {
+___ findMinMax(int *arr, int arr_size, _____) {
     ______ // Fill in
 }
 
