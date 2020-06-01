@@ -8,29 +8,32 @@ sidebar-title: Week 4
 ---
 
 
-<p align="center"> <a> Recorded video (to be updated) </a> </p>
+<p align="center"> <a href="https://www.youtube.com/playlist?list=PLKjkL6I7UpX8kEaSQZZ0aoev1GjX1hF-U"> Recorded videos (courtesy Mustafa) </a> </p>
 
 ---
 
 # Pointers!
 
-Pointers are just a variable. This variable will store in its *memory box* the memory address of another variable, which we can decide. When we create a pointer, its type must match the variable type.
+Before you get scared off - pointers are just variables! The only thing different about them is that the store the *memory addresses* (or box numbers) of other variables - which we can decide. When we create a pointer, its type must match the variable type.
 
-For example, if you want to initialize the pointer ```p``` that will store the address of an integer, we can do the following:
+For example, if you want to initialize the pointer `p` that will store the address of an integer, we can do the following:
 
 ```c
 int *p = NULL;
 ```
+
+Note that in this case we have said `p` points to an integer. `NULL` is the default value we give something. Think of it as saying "Does not point to anything".
+
 ---
 
 ## How do we use pointers?
 
 ---
 
-We first need to **assign** a variable to our pointer. For that we use the ```&``` symbol.
+We first need to **assign** a variable to our pointer. For that we use the `&` operator.
 
 ```c
-// We have already initialized our pointer above.
+// We have already declared our pointer above.
 // Now, we are going to store the address of an integer.
 int x = 0;
 p = &x;
@@ -62,6 +65,38 @@ We can also **modify** the value of the memory box stored in the pointer.
 // Let's change the value of x to 3.
 // We need to modify then it's memory box
 *(p) = 3;
+```
+
+---
+
+## Worked exercise
+
+---
+
+Implement a function called `div_mod()` that takes in two integers `a` and `b`, and returns the quotient (`a / b`) and the remainder (`a % b`).
+
+*Hint:* You can't return multiple values directly... How can pointers help?
+
+```c
+#include <stdio.h>
+
+_____ div_mod( ________ ) {
+    _______ // Fill in
+}
+
+int main() {
+  int a = 19;
+  int b = 5;
+  int div, mod;
+
+  // Call your function here...
+  ______
+
+  // Should print: "a / b = 3,  a % b = 4"
+  printf("a / b = %d,  a %% b = %d\n", div, mod);
+  return 0;
+}
+
 ```
 
 ---
@@ -100,70 +135,49 @@ We can use offsets to access (and modify) other values of the array.
 
 ---
 
-Let's review the *reverse* function we did in lecture, which takes as input two pointers: the first one points to the string we want to revert and the second one points to were we want to store the new reversed word.
-
-```c
-void reverse(char *input, char *out) {
-    printf("TODO\n");
-}
-
-int main(){
-    char str1[1024] = "Hello";
-    char str2[1024];
-
-    reverse(str1, str2);
-
-    // Expected: Hello
-    printf("input is %s\n", str1);
-    // Expected: olleH
-    printf("output is %s\n", str2);
-}
-```
-
-Now, we will create the function *reverse_in_place* that will reverse a string in place. 
+In lecture we showed you how to write the `reverse()` function to reverse arrays (and as a result, also strings). Rewrite this function using **just** pointer notation with what you learned above.
 
 *Hint:* Use pointers and offsets!
 
 ```c
-void reverse_in_place(char *input) {
-    printf("TODO\n");
+void reverse(char *str) {
+    ______ // Fill in
 }
 
-int main(){
-    char str1[1024] = "Hello";
+int main() {
+    char str[1024] = "Hello World!";
 
-    // Expected: Hello
-    printf("Before: %s\n", str1);
+    // Expected: Hello World!
+    printf("Before: %s\n", str);
 
-    reverse_inplace(str1);
+    reverse(str);
 
-    // Expected: olleH
-    printf("After: %s\n", str1);
+    // Expected: !dlorW olleH
+    printf("After: %s\n", str);
 }
 ```
+---
 
-Given the following starter code, implement the function *pokeAround* to print the values stored in the other variables around it.
+Given the following starter code, implement the function *findMinMax* to return the minimum and maximum values in a given array. Use **only** pointer notation!
 
-*Hint:* Use the same hint as last exercise :)
+*Hint:* You can't return multiple values directly... How can pointers help?
 
 ```c
+#include<stdio.h>
 
-void pokeAround(char *p){
-    printf("TODO\n");
+___ findMinMax(char *arr, int arr_size, _____) {
+    ______ // Fill in
 }
 
-int main(){
-    char  oneStr[1024]="I am string ONE!";
-	char  twoStr[1024]="I am string TWO!";
-	char  c='C';
-	char  d='*';
-	char  e='!';
-	char  f='@';
-	int   x=65;
+int main() {
+    int array[5] = {10, 3, 24, 9, -1};
+    int arr_min, arr_max;
 
-	pokeAround(&twoStr[0]);
+    // Call your function...
+    _______
+
+    printf("min is %d, max is %d\n");
 }
-
 ```
 
 ---
