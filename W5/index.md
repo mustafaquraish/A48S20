@@ -69,6 +69,7 @@ To **access** a field:
 v.field1 = 3;
 // In our example
 angela.name = "Angela Zavaleta";
+```
 
 To **pass** or **return** them from a function:
 
