@@ -8,7 +8,7 @@ sidebar-title: Week 5
 ---
 
 
-<p align="center"> <a href="https://www.youtube.com/"> Recorded videos (courtesy of Will) </a> </p>
+<p align="center"> <a href="https://www.youtube.com/playlist?list=PLlTc---1rMDXdCiTq-5gmNbjEMgNTCXrO"> Recorded videos (courtesy of Will) </a> </p>
 
 ---
 
