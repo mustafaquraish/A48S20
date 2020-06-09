@@ -25,8 +25,15 @@ inputElement.addEventListener('change', (e) => {
   imgElement.src = URL.createObjectURL(e.target.files[0]);
 }, false);
 
+function debounce(func, wait) {
+  let timeout
+  return function(...args) {
+    clearTimeout(timeout)
+    timeout = setTimeout(() => func.apply(null, args), wait)
+  }
+}
 
-function displayImage() {
+displayImage = debounce(function () {
   if (edges !== undefined) {
     edges.delete();
   }
@@ -36,7 +43,7 @@ function displayImage() {
     cv.Canny(mat, edges, THRESH1, 100, 3, false);
     for (let j = 0; j < edges.rows; j++) {
       for (let i = 0; i < edges.cols; i++) {
-        let idx = i + j*edges.cols;
+        let idx = i + j * edges.cols;
         edges.data[idx] = 255 - edges.data[idx];
       }
     }
@@ -44,22 +51,24 @@ function displayImage() {
     edges = mat.clone();
     for (let j = 0; j < edges.rows; j++) {
       for (let i = 0; i < edges.cols; i++) {
-        let idx = i + j*edges.cols;
+        let idx = i + j * edges.cols;
         edges.data[idx] = (edges.data[idx] >= THRESH1) ? 255 : 0;
       }
     }
   }
 
   cv.imshow('canvasOutput', edges);
-}
+}, 250);
 
-slider1.onchange = function() {
+window.onresize = displayImage;
+
+slider1.onchange = function () {
   THRESH1 = parseFloat(this.value);
-  console.log('slider value:'+this.value);
+  console.log('slider value:' + this.value);
   displayImage();
 }
 
-imgElement.onload = function() {
+imgElement.onload = function () {
   if (mat !== undefined) {
     mat.delete()
   }
@@ -69,11 +78,11 @@ imgElement.onload = function() {
 };
 
 function onOpenCvReady() {
-  document.getElementById('status').innerHTML = 'OpenCV.js is ready.';
+  document.getElementById('status').style.display = 'none';
 }
 
-function edgeCheck() {
-  canny = !canny;
+function edgeCheck(event) {
+  canny = event.target.value === "1";
   if (mat !== undefined) {
     displayImage();
   }
@@ -85,19 +94,19 @@ function saveClick() {
 
   for (let j = 0; j < edges.rows; j++) {
     for (let i = 0; i < edges.cols; i++) {
-      let idx = i + j*edges.cols;
+      let idx = i + j * edges.cols;
       let col = edges.data[idx];
 
       if (start === undefined && col < 128) {
         start = i;
       }
       if (start !== undefined && col >= 128) {
-        lines.push({x1: start, y1: j, x2: i, y2: j})
+        lines.push({ x1: start, y1: j, x2: i, y2: j })
         start = undefined;
       }
     }
     if (start !== undefined) {
-      lines.push({x1: start, y1: j, x2: edges.cols-1, y2: j})
+      lines.push({ x1: start, y1: j, x2: edges.cols - 1, y2: j })
       start = undefined;
     }
   }
@@ -121,6 +130,5 @@ function saveClick() {
     text += "forward " + (ln.x2 - ln.x1) + "\n";
     mx = ln.x2;
   }
-  let fname = document.getElementById("fileName").value;
-  download(fname, text);
+  download('instructions.txt', text);
 }
