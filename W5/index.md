@@ -41,6 +41,7 @@ typedef struct Uoft_student {
     char name[1024];
     int studentNumber;
     int age;
+    struct UofT_student *teammate;
     // And we can keep going...
 } Student;
 ```
@@ -68,7 +69,7 @@ To **access** a field:
 // Generalized
 v.field1 = 3;
 // In our example
-angela.name = "Angela Zavaleta";
+strcpy(angela.name, "Angela Zavaleta");
 ```
 
 To **pass** or **return** them from a function:
@@ -107,6 +108,7 @@ Student willy;
 Student *willy_pointer;
 willy_pointer = &willy;
 strcpy(willy_pointer->name, "Willy Song");
+willy_pointer->teammate = &angela;
 ```
 
 ---
