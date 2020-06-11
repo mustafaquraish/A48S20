@@ -106,7 +106,7 @@ Let's show this using our student example:
 Student willy;
 Student *willy_pointer;
 willy_pointer = &willy;
-willy_pointer->name = "Willy Song";
+strcpy(willy_pointer->name, "Willy Song");
 ```
 
 ---
