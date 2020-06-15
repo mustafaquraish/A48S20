@@ -8,7 +8,7 @@ sidebar-title: Week 6
 ---
 
 
-<p align="center"> <a href="https://www.youtube.com/"> Recorded videos (Need to update) </a> </p>
+<p align="center"> <a href="https://youtu.be/94Y_a6DcrL8"> Recorded videos (Thanks Will!) </a> </p>
 
 ---
 
