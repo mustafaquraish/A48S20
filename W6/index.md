@@ -112,13 +112,20 @@ Assignment 1 was posted this week and as we always say, it's important for you t
 The general idea is that you have a turtle that starts off at the top-left of the screen, and follows all the instructions given to move around, drawing a line along the path it takes. Let's take a simple example:
 
 ```
+penup
 forward 100
 right
 forward 100
-right
-forward 100
-right
-forward 100
+pendown
+forward 300
+left
+forward 300
+left
+forward 300
+left
+forward 300
+left
+
 ```
 
 What do you think this draws onto the screen? 
@@ -126,9 +133,14 @@ What do you think this draws onto the screen?
 Of course, we're also programmers so we hate repetitive instructions! In the assignment you'll also implement support for a loop structure that lets you do something like:
 
 ```
+penup
+forward 100
+right
+forward 100
+pendown
 loop 4
-  forward 100
-  right
+  forward 300
+  left
 ```
 
 
