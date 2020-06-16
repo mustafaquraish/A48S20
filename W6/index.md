@@ -73,6 +73,14 @@ If you want to **delete** a node from the linked list, you need to *traverse* ev
 
 ---
 
+### Angela's Favourite Linked List
+
+---
+
+![linkedlist](linkedlist.png)
+
+---
+
 # Dynamic Memory Management
 
 
