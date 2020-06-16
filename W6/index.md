@@ -79,6 +79,8 @@ If you want to **delete** a node from the linked list, you need to *traverse* ev
 
 ![linkedlist](linkedlist.png)
 
+*Credits: Ali Spittel,* <a href="https://dev.to/aspittel/thank-u-next-an-introduction-to-linked-lists-4pph"> dev.to </a>
+
 ---
 
 # Dynamic Memory Management
