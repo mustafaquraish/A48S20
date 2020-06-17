@@ -6,7 +6,7 @@ var edges = undefined;
 var mat = undefined;
 
 let THRESH1 = 128;
-let canny = true;
+let MODE = 'canny';
 
 function download(filename, text) {
   var element = document.createElement('a');
@@ -38,7 +38,7 @@ displayImage = debounce(function () {
     edges.delete();
   }
 
-  if (canny) {
+  if (MODE == 'canny') {
     edges = new cv.Mat();
     cv.Canny(mat, edges, THRESH1, 100, 3, false);
     for (let j = 0; j < edges.rows; j++) {
@@ -47,7 +47,7 @@ displayImage = debounce(function () {
         edges.data[idx] = 255 - edges.data[idx];
       }
     }
-  } else {
+  } else if (MODE == 'thresh') {
     edges = mat.clone();
     for (let j = 0; j < edges.rows; j++) {
       for (let i = 0; i < edges.cols; i++) {
@@ -55,6 +55,8 @@ displayImage = debounce(function () {
         edges.data[idx] = (edges.data[idx] >= THRESH1) ? 255 : 0;
       }
     }
+  } else {
+    edges = mat.clone();
   }
 
   cv.imshow('canvasOutput', edges);
@@ -64,7 +66,6 @@ window.onresize = displayImage;
 
 slider1.onchange = function () {
   THRESH1 = parseFloat(this.value);
-  console.log('slider value:' + this.value);
   displayImage();
 }
 
@@ -81,8 +82,8 @@ function onOpenCvReady() {
   document.getElementById('status').style.display = 'none';
 }
 
-function edgeCheck(event) {
-  canny = event.target.value === "1";
+function modeSelect(event) {
+  MODE = event.target.value;
   if (mat !== undefined) {
     displayImage();
   }
@@ -91,22 +92,30 @@ function edgeCheck(event) {
 function saveClick() {
   let lines = [];
   let start = undefined;
+  let startCol = undefined;
+  let color = 0;
 
   for (let j = 0; j < edges.rows; j++) {
     for (let i = 0; i < edges.cols; i++) {
       let idx = i + j * edges.cols;
       let col = edges.data[idx];
-
-      if (start === undefined && col < 128) {
+      
+      if (start === undefined && col != 255) {
         start = i;
+        startCol = col;
       }
-      if (start !== undefined && col >= 128) {
-        lines.push({ x1: start, y1: j, x2: i, y2: j })
-        start = undefined;
+      if (start !== undefined && col !== startCol) {
+        lines.push({ x1: start, y1: j, x2: i, y2: j, col: startCol })
+        if (col == 255) {
+          start = undefined;
+        } else {
+          start = i;
+          startCol = col;
+        }
       }
     }
     if (start !== undefined) {
-      lines.push({ x1: start, y1: j, x2: edges.cols - 1, y2: j })
+      lines.push({ x1: start, y1: j, x2: edges.cols - 1, y2: j, col: startCol })
       start = undefined;
     }
   }
@@ -114,6 +123,7 @@ function saveClick() {
   let text = "";
   let mx = 0;
   let my = 0;
+  let curCol = 0;
 
   for (ln of lines) {
     text += "penup\n";
@@ -126,6 +136,9 @@ function saveClick() {
       my = ln.y1;
     }
     text += "forward " + (ln.x1 - mx) + "\n";
+    if (ln.col != curCol) {
+      text += "colour " + ln.col + "\n";
+    }
     text += "pendown\n";
     text += "forward " + (ln.x2 - ln.x1) + "\n";
     mx = ln.x2;

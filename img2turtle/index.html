@@ -23,9 +23,10 @@
 
     <label class="toolbar-item toolbar-item--hidden-no-file">
       <div>
-        Edge Detection
+        <!-- Edge Detection -->
+        Mode
       </div>
-      <input
+      <!-- <input
         type="range"
         min="0"
         max="1"
@@ -33,7 +34,18 @@
         onchange="edgeCheck(event)"
         id="scales"
         name="scales"
+      > -->
+      <select 
+        id="modeselect"
+        name="mode"
+        onchange="modeSelect(event)"
+        id="scales"
+        name="scales"
       >
+        <option value="canny">Edge detection</option>
+        <option value="thresh">Threshold</option>
+        <option value="regular">Regular</option>
+      </select>
     </label>
 
     <label class="toolbar-item toolbar-item--hidden-no-file">
