@@ -162,4 +162,4 @@ loop 4
 
 We want to show you how your program should work, so Mustafa created a webapp where you can play around with an implemented version of the assignment and test your test cases! Visit <a href="https://turtlerunner.herokuapp.com"> Turtle Runner</a> to enter your turtle commands and run it to get the expected output. (If you find any bugs or weird behaviour, let us know!)
 
-<a href="https://github.com/CSCA48S20/tutorials/raw/master/W6/angelas-surprise.txt" download> Here's a file </a> containing turtle instructions to Angela's favorite drawing 😃 (Right click, Save link as...)
+<a href="https://github.com/CSCA48S20/tutorials/raw/master/W6/angelas-surprise.txt" download> Here's a file </a> containing turtle instructions to Angela's favorite drawing 😃 (Right click, Save link as...) Give it a few seconds, its a LOT of instructions...
