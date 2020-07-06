@@ -105,7 +105,7 @@ When you are done using the memory, you need to manually free it using the `free
 This is how you would allocate enough space for **N elements** of **type T**:
 
 ```c
-T *allocatedPtr = (T *) calloc(sizeof(T), N);
+T *allocatedPtr = (T *) calloc(N, sizeof(T));
 ```
 
 Once you are done, you will free it like this:
