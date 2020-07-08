@@ -8,7 +8,7 @@ sidebar-title: Week 9
 ---
 
 
-<p align="center"> <a href="https://youtube.com/"> Recorded videos (TBD) </a> </p>
+<p align="center"> <a href="https://youtu.be/e3-GDIa1h5k"> Recorded videos (Thanks Will!) </a> </p>
 
 ---
 
