@@ -72,6 +72,8 @@ BST_Node *BST_insert(BST_Node *root, BST_Node *new_node) {
 
 Let's traverse through this code, and insert the elements of the follwing array to an empty BST: ```[56, 17, 24, 78, 67, 98, 5, 2, 15, 31, 71]```. Once you are done, try it in <a href="https://www.cs.usfca.edu/~galles/visualization/BST.html">this simulator</a> to compare the results.
 
+*Note:* The simulator inserts nodes equal than the root on the right sub-tree instead of the next, so you need to keep that in mind while comparing exercises with duplicate elements.
+
 ---
 
 ### How can we search for a node?
@@ -120,6 +122,6 @@ BST_Node *BST_delete(BST_Node *root, int key) {
 }
 ```
 
-To verify your function, try deleting a couple of nodes from the previous BST example: ```[56, 17, 24, 78, 67, 98, 5, 2, 15, 31, 71]```. Let's see what happens when you delete the root, compare your answer using <a href="https://www.cs.usfca.edu/~galles/visualization/BST.html">the same simulator</a> as before.
+To verify your function, try deleting a couple of nodes from the previous BST example: ```[56, 17, 24, 78, 67, 98, 5, 2, 15, 31, 71]```.
 
 ---
