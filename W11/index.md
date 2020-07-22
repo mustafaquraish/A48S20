@@ -8,7 +8,7 @@ sidebar-title: Week 11
 ---
 
 
-<p align="center"> <a href="https://youtu.be/"> Recorded videos (TBD) </a> </p>
+<p align="center"> <a href="https://youtu.be/HtFHehe1XdQ"> Recorded videos (Thanks Willy!) </a> </p>
 
 ---
 
