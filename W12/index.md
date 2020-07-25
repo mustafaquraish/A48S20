@@ -37,7 +37,7 @@ There are two general types of graphs, **undirected** and **directed**
 
 Graphs with edges that represent direction in both ways, in other words, there is a reciprocal relationship.
 
-_Example:_ Facebook's friend network
+<span style="color:plum">_Example:_</span> Facebook's friend network
 
 ![undir](g1.jpeg)
 
@@ -45,7 +45,7 @@ _Example:_ Facebook's friend network
 
 Graphs with edges that represent one side direction, in other words, there is a one way relationship.
 
-_Example:_ Twitter's followers network
+<span style="color:plum">_Example:_</span> Twitter's followers network
 
 ![dir](g2.jpeg)
 
@@ -57,31 +57,31 @@ _Example:_ Twitter's followers network
 
 For an undirected graph, a node **v** is a **neighbour** of the node **u** if there exists an edge between those two nodes (that edge is represented by **{u,v}**). 
 
-_Example:_ In **G<sub>1</sub>**, the neighbour of Dezi is Brandon.
+<span style="color:plum">_Example:_</span> In **G<sub>1</sub>**, the neighbour of Dezi is Brandon.
 
 For a directed graph, a node **v** is a **in-neighbour** of the node **u** if there exists an edge **{u,v}** from **u** to **v**. A node **v** is a **out-neighbour** of the node **u** if there exists an edge **{v,u}** from **v** to **u**. 
 
-_Example:_ In **G<sub>2</sub>**, @Raptors is an in-neighbour of @UTSC, and @UTSC is an out-neightbour of @Raptors.
+<span style="color:plum">_Example:_</span> In **G<sub>2</sub>**, @Raptors is an in-neighbour of @UTSC, and @UTSC is an out-neightbour of @Raptors.
 
 ## Neighbourhood
 
 For an undirected graph, the **neighbourhood** of a node **v** is the set of all nodes that are neighbours of **v**.
 
-_Example:_ In **G<sub>1</sub>**, the neighbourhood of Mustafa is the set of nodes {Brandon, Angela}.
+<span style="color:plum">_Example:_</span> In **G<sub>1</sub>**, the neighbourhood of Mustafa is the set of nodes {Brandon, Angela}.
 
 For a directed graph, there exists an **out-neighbourhood** and an **in-neighbourhood**.
 
-_Example:_ In **G<sub>2</sub>**, the in-neighbourhood of @Brian is the set of the nodes {@UTSC, @Uoft, @Angela} and the out-neighbourhood of @Brian is the set of the nodes {@UTSC, @Angela}
+<span style="color:plum">_Example:_</span> In **G<sub>2</sub>**, the in-neighbourhood of @Brian is the set of the nodes {@UTSC, @Uoft, @Angela} and the out-neighbourhood of @Brian is the set of the nodes {@UTSC, @Angela}
 
 ## Degree
 
 For an undirected graph, the **degree** of a node **v** is the size (number of nodes) in the neighbourhood of **v**.
 
-_Example:_ In **G<sub>1</sub>**, the degree of Will is 2.
+<span style="color:plum">_Example:_</span> In **G<sub>1</sub>**, the degree of Will is 2.
 
 For a directed graph, the node **v** has an **in-degree** and an **out-degree**.
 
-_Example:_ In **G<sub>2</sub>**, the in-degree of @nytimes is 1 and the out-degree is 3.
+<span style="color:plum">_Example:_</span> In **G<sub>2</sub>**, the in-degree of @nytimes is 1 and the out-degree is 3.
 
 ## Path
 
@@ -91,11 +91,11 @@ A **path** is a sequence of consecutive nodes that can be visited by following e
 
 For undirected graphs, a **cycle** is a path with at least three nodes that starts and ends at the same node.
 
-_Example:_ In **G<sub>1</sub>**, there is a cycle between the nodes Brandon, Mustafa and Angela.
+<span style="color:plum">_Example:_</span> In **G<sub>1</sub>**, there is a cycle between the nodes Brandon, Mustafa and Angela.
 
 For directed graphs, a **cycle** is a path that begins and ends at the same node, but in this case the path can have any number of nodes.
 
-_Example:_ In **G<sub>2</sub>**, there is a cycle between the nodes @Brian, @UTSC and @Angela.
+<span style="color:plum">_Example:_</span> In **G<sub>2</sub>**, there is a cycle between the nodes @Brian, @UTSC and @Angela.
 
 ### Exercise
 
