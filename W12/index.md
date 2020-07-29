@@ -8,7 +8,7 @@ sidebar-title: Week 12
 ---
 
 
-<p align="center"> <a href="https://youtu.be/"> Recorded videos (TBA) </a> </p>
+<p align="center"> <a href="https://youtu.be/isbd5BAG3_o"> Recorded videos (Thanks Willy!) </a> </p>
 
 ---
 
