@@ -20,6 +20,10 @@ sidebar-title: Week 13
 
 We have solved this problem in a non-recursive way multiple times before. There are multiple ways we can solve it using recursion too. Sometimes using a helper can be useful, specially if you need to add more parameters to a function.
 
+### Exercise:
+
+Implement the larger function using loops, once you find a working solution, implement it using recursion.
+
 ```c
 #include <stdio.h>
 
@@ -38,6 +42,10 @@ int main() {
 ## Find if a string is a palindrome or not
 
 A palindrome is a word or phrase that reads the same backward as forward. Implement a recursive function to find is a word is a palindrome or not.
+
+### Exercise:
+
+Implement the isPalindrome function using loops, once you find a working solution, implement it using recursion.
 
 ```c
 #include <stdio.h>
